@@ -1,13 +1,13 @@
 pipeline {
     agent any
 
-    stages {
+    // stages {
 
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/Suresh510524/git.git'
-            }
-        }
+    //     stage('Clone Code') {
+    //         steps {
+    //             git 'https://github.com/Suresh510524/git.git'
+    //         }
+    //     }
 
         stage('Build Docker Image') {
             steps {
