@@ -9,11 +9,11 @@ pipeline {
             }
         }
 
-        stage('Stop Old Container') {
-            steps {
-                sh 'docker rm -f mywebapp_latest || true'
-            }
-        }
+        // stage('Stop Old Container') {
+        //     steps {
+        //         sh 'docker rm -f mywebapp_latest || true'
+        //     }
+        // }
 
         stage('Run Container') {
             steps {
