@@ -1,13 +1,7 @@
 pipeline {
     agent any
 
-    // stages {
-
-    //     stage('Clone Code') {
-    //         steps {
-    //             git 'https://github.com/Suresh510524/git.git'
-    //         }
-    //     }
+    stages {
 
         stage('Build Docker Image') {
             steps {
@@ -17,8 +11,7 @@ pipeline {
 
         stage('Stop Old Container') {
             steps {
-                sh 'docker stop mywebapp || true'
-                sh 'docker rm mywebapp || true'
+                sh 'docker rm -f mywebapp || true'
             }
         }
 
